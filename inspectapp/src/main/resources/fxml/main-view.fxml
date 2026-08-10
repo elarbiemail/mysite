@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import com.inspectapp.ui.component.Sidebar?>
+<BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.inspectapp.ui.controller.MainController"
+            styleClass="main-container">
+    
+    <!-- Sidebar MacGlass -->
+    <left>
+        <fx:include source="sidebar.fxml"/>
+    </left>
+    
+    <!-- Content Area -->
+    <center>
+        <ScrollPane fx:id="contentScrollPane" fitToWidth="true" styleClass="content-scrollpane">
+            <VBox fx:id="contentContainer" spacing="20"/>
+        </ScrollPane>
+    </center>
+    
+</BorderPane>
