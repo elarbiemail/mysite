@@ -1,28 +1,27 @@
 ```
-# Compiled and build artifacts
-*.class
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
-# Dependencies
-lib/
+# Build artifacts
+dependency-reduced-pom.xml
+target/
+
 # Logs and temp files
 *.log
 *.tmp
-*.swp
+
 # Environment
 .env
 .env.local
 *.env.*
+
 # Editors
 .vscode/
 .idea/
-# Build directories
-build/
-target/
-dist/
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.gradle/
 ```

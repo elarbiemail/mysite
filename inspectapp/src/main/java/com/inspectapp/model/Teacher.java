@@ -169,14 +169,15 @@ public class Teacher {
     
     public long getAnneesAnciennete() {
         if (dateRecrutement != null) {
-            return java.time.Years.between(dateRecrutement, LocalDate.now()).getYears();
+            return java.time.Period.between(dateRecrutement, LocalDate.now()).getYears();
         }
         return 0;
     }
     
     public long getMoisDepuisDerniereInspection() {
         if (derniereInspection != null) {
-            return java.time.Months.between(derniereInspection, LocalDate.now()).getMonths();
+            java.time.Period period = java.time.Period.between(derniereInspection, LocalDate.now());
+            return period.getYears() * 12 + period.getMonths();
         }
         return -1; // Jamais inspecté
     }
